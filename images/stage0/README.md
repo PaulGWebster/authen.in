@@ -19,6 +19,6 @@ At this stage you should have within your local docker images, authen:base
 
 The next stage, you can test this with the following command:
 
-```docker run -it authen:base echo test```
+```docker run -it authen:stage0 echo test```
 
 You should receive: 'test' and be returned to command prompt.
