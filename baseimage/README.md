@@ -12,3 +12,4 @@ within a git repository and optionally uploaded as a stand alone image
 ## Rebuilding
 * cat base.tar.* > base.tar
 * docker load < base.tar
+* rm base.tar
