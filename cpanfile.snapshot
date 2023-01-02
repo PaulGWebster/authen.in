@@ -1,5 +1,12 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  App-cpanminus-1.7046
+    pathname: M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz
+    provides:
+      App::cpanminus 1.7046
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.008001
   CPAN-Common-Index-0.010
     pathname: D/DA/DAGOLDEN/CPAN-Common-Index-0.010.tar.gz
     provides:
