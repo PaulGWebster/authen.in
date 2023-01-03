@@ -1,4 +1,8 @@
-# Steps to reproduce
+# Fast and dirty
+
+```./build.sh```
+
+## Steps to reproduce
 
 This is the original steps made to create the image, so it could be stored
 within a git repository and optionally uploaded while fitting within the 
