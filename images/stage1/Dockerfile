@@ -9,16 +9,19 @@ RUN cd /build                               \
     && cd perl*                             \
     && sh Configure -de -Dprefix=/usr       \
     && make -j4                             \
-    && make install
+    && make install                         \
+    && cd /build                            \
+    && rm -Rf *
 
 COPY App-cpanminus-* /build/
 RUN cd /build                               \
-    && rm -Rf perl*                         \
     && tar -xzf App*                        \
     && rm *.tar.gz                          \
     && cd App*                              \
     && perl Makefile.PL                     \
     && make                                 \
-    && make install
+    && make install                         \
+    && cd /build                            \
+    && rm -Rf *
 
 CMD [ /bin/bash ]
