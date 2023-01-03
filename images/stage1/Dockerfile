@@ -8,7 +8,7 @@ RUN cd /build                               \
     && rm *.tar.gz                          \
     && cd perl*                             \
     && sh Configure -de -Dprefix=/usr       \
-    && make -j4                             \
+    && make 2>/dev/null                     \
     && make install                         \
     && cd /build                            \
     && rm -Rf *
