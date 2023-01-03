@@ -32,6 +32,16 @@ RUN cd /build                               \
     && make install                         \
     && rm -Rf /build/*
 
+COPY libwww* /build/
+RUN cd /build                               \
+    && tar -xzf libwww*                     \
+    && rm *.tar.gz                          \
+    && cd libwww*                           \
+    && perl Makefile.PL                     \
+    && make 2>/dev/null                     \
+    && make install                         \
+    && rm -Rf /build/*
+
 COPY App-cpanminus-* /build/
 RUN cd /build                               \
     && tar -xzf App*                        \
