@@ -7,5 +7,3 @@ COPY cpan* /build/
 
 RUN cpanm --from "/build/vendor/cache" --installdeps --notest --quiet . 2>/dev/null \ 
 && rm -Rf /build
-
-CMD [ /bin/bash ]
