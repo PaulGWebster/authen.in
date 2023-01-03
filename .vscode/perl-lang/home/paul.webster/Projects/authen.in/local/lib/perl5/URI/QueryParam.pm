@@ -1,0 +1,1 @@
+{"vars":[{"line":0,"definition":1,"kind":2,"name":"URI::QueryParam"},{"name":"strict","kind":2,"line":1,"containerName":""},{"containerName":"","line":2,"kind":2,"name":"warnings"},{"line":4,"containerName":"URI::QueryParam","definition":"our","kind":13,"name":"$VERSION"}],"version":5}

@@ -1,0 +1,1 @@
+{"version":5,"vars":[{"line":0,"definition":1,"kind":2,"name":"URI::nntp"},{"line":2,"containerName":"","kind":2,"name":"strict"},{"line":3,"containerName":"","name":"warnings","kind":2},{"name":"$VERSION","kind":13,"definition":"our","containerName":"URI::nntp","line":5},{"name":"parent","kind":2,"line":7,"containerName":""}]}
