@@ -52,5 +52,3 @@ RUN cd /build                               \
     && make install                         \
     && rm -Rf /build/*
 
-
-CMD [ /bin/bash ]
