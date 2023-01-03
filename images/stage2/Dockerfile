@@ -5,6 +5,6 @@ WORKDIR /build
 COPY vendor /build/vendor
 COPY cpan* /build/
 
-RUN cpanm --from "/build/vendor/cache" --installdeps --notest --quiet .
+RUN cpanm --from "/build/vendor/cache" --installdeps --notest --quiet . 2>/dev/null
 
 CMD [ /bin/bash ]
