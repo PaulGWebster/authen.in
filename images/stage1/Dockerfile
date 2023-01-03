@@ -1,8 +1,18 @@
 FROM authen:stage0 AS stage1
 
 RUN mkdir /build
-COPY perl-* /build/
 
+COPY openssl* /build/
+RUN cd /build                               \
+    && tar -xzf openssl*                    \
+    && rm *.tar.gz                          \
+    && cd open*                             \
+    && ./config                             \
+    && make                                 \
+    && make install                         \
+    && rm -Rf /build/*
+
+COPY perl-* /build/
 RUN cd /build                               \
     && tar -xzf perl-*                      \
     && rm *.tar.gz                          \
@@ -10,8 +20,17 @@ RUN cd /build                               \
     && sh Configure -de -Dprefix=/usr       \
     && make 2>/dev/null                     \
     && make install                         \
-    && cd /build                            \
-    && rm -Rf *
+    && rm -Rf /build/*
+
+COPY Net-SSL* /build/
+RUN cd /build                               \
+    && tar -xzf Net-SSL*                    \
+    && rm *.tar.gz                          \
+    && cd Net*                              \
+    && perl Makefile.PL                     \
+    && make 2>/dev/null                     \
+    && make install                         \
+    && rm -Rf /build/*
 
 COPY App-cpanminus-* /build/
 RUN cd /build                               \
@@ -21,7 +40,7 @@ RUN cd /build                               \
     && perl Makefile.PL                     \
     && make                                 \
     && make install                         \
-    && cd /build                            \
-    && rm -Rf *
+    && rm -Rf /build/*
+
 
 CMD [ /bin/bash ]
