@@ -1,1 +1,0 @@
-{"vars":[{"line":0,"definition":1,"kind":2,"name":"Menlo::Legacy"},{"name":"strict","kind":2,"containerName":"","line":2},{"containerName":"Menlo::Legacy","definition":"our","line":3,"kind":13,"name":"$VERSION"}],"version":5}
