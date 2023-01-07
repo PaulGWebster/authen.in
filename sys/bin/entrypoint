@@ -38,5 +38,4 @@ sub signal_handle
     my ($value,@other) = @_;
 
     say "Signal: $value";
-
 }
