@@ -1,2 +1,0 @@
-requires 'POE','1.370';
-requires 'POE::Wheel::Run','1.370';
