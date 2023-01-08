@@ -2,10 +2,10 @@ FROM authen:stage2 AS stage3
 
 USER perl
 
-WORKDIR /build
+WORKDIR /home/perl/build
 
-COPY vendor /build/vendor
-COPY cpan* /build/
+RUN eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"                                 \
+    && cpanm --from "/home/perl/build/vendor/cache" --installdeps --notest --quiet .    \
+    && rm -Rf /home/perl/build
 
-RUN cpanm --from "/build/vendor/cache" --installdeps --notest --quiet . 2>/dev/null \ 
-&& rm -Rf /build
+CMD ['bash']

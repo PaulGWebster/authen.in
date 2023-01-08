@@ -53,9 +53,3 @@ RUN cd /build                               \
     && rm -Rf /build/*
 
 RUN useradd -m -s /bin/bash perl
-
-USER perl
-
-RUN mkdir /home/perl/build
-
-RUN cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
