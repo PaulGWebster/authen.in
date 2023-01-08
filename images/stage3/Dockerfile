@@ -1,5 +1,7 @@
 FROM authen:stage2 AS stage3
 
+USER perl
+
 WORKDIR /build
 
 COPY vendor /build/vendor
