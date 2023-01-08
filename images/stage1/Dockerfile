@@ -52,4 +52,6 @@ RUN cd /build                               \
     && make install                         \
     && rm -Rf /build/*
 
+RUN rm -Rf /build
+
 RUN useradd -m -s /bin/bash perl
