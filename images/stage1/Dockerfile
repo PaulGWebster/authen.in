@@ -59,8 +59,3 @@ USER perl
 RUN mkdir /home/perl/build
 
 RUN cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
-
-RUN echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"' > ~/.bash_profile
-
-RUN echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"' > ~/.bash_login
-
