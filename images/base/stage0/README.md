@@ -9,7 +9,7 @@ within a git repository and optionally uploaded while fitting within the
 restraintsas of file system sizes.
 
 * docker pull gcc:12.2.0-bullseye
-* docker tag gcc:12.2.0-bullseye authen:stage0
+* docker tag gcc:12.2.0-bullseye perlbase:stage0
 * docker save authen:stage0 > base.tar 
 * split base.tar -b 50M base.tar.
 * rm base.tar

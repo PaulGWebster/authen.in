@@ -1,4 +1,4 @@
-FROM authen:stage0 AS stage1
+FROM perlbase:stage0 AS stage1
 
 RUN mkdir /build
 
